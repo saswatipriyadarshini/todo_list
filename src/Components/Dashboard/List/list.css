@@ -1,0 +1,44 @@
+.list__container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+.fake-placeholder{
+	font-size: 18px;
+	line-height: 18px;
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.25s ease;
+	pointer-events: none;
+}
+
+.list-input{
+	height: 30px;
+	width: 200px;
+	padding: 4px 8px;
+	font-size: 20px;
+}
+@keyframes startFilling{
+}
+
+@keyframes stopFilling{
+}
+.list-input:-webkit-autofill{
+	animation-name: startFilling;
+	transition: background-color 50000s ease-in-out 0s;
+}
+
+.list-input:not(:-webkit-auofill){
+	animation-name: stopFilling;
+}
+
+.hide{
+	top: -8px;
+	left: 0;
+	font-size: 12px;
+	pointer-events: all;
+}
+
